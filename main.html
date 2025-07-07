@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shaw's News</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaw's News</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <header class="header">
-    <h1>Shaw's News</h1>
-  </header>
+<body class="bg-[#f5f5f5] min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="bg-[#011e29] text-white p-4 md:p-6 shadow-md rounded-b-lg">
+        <div class="container mx-auto text-center">
+            <h1 class="text-2xl md:text-4xl font-bold rounded-md">Shaw's News</h1>
+        </div>
+    </header>
 
-  <div class="news-container">
-    <!-- Latest News Section -->
-    <div class="latest-news-section">
-      <h3>Latest News Articles</h3>
-      <ul>
-        <li>Article 1</li>
-        <li>Article 2</li>
-        <li>Article 3</li>
-      </ul>
-    </div>
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-4 flex-grow flex flex-col lg:flex-row gap-4 md:gap-6 mt-4 md:mt-6">
 
-    <!-- Main Article Section -->
-    <div class="main-article-section">
-      <h2>Main Article</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna eu fringilla malesuada,
-        ipsum risus eleifend est, non feugiat quam augue euismod eros. Sed malesuada, magna eu fringilla
-        malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros.
-      </p>
-    </div>
+        <!-- Latest News Articles Section -->
+        <section class="latest-news-section bg-white p-4 md:p-6 rounded-lg shadow-md lg:w-1/4">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4 border-b pb-2">Latest News Articles</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><a href="#" class="text-blue-600 hover:underline">Article 1: Breaking News Headline</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Article 2: Local Events Update</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Article 3: World Affairs Summary</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Article 4: Technology Innovations</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Article 5: Health & Wellness Tips</a></li>
+            </ul>
+        </section>
 
-    <!-- Pictorial News Section -->
-    <div class="pictorial-news-section">
-      <h3>Pictorial News</h3>
-      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/delhi_rains_1674974112847_1674981888135_1674981888135.jpeg" width="100%" alt="News 1">
-      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/ADANI-INDIA-GAUTAM-ADANI-0_1675011651023_1675011651023_1675011672003_1675011672003.JPG" width="100%" alt="News 2">
-      <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/FRANCE-REFORM-PENSIONS-31_1675022359706_1675022359706_1675022383851_1675022383851.JPG" width="100%" alt="News 3">
-    </div>
-  </div>
+        <!-- Main Article Section -->
+        <section class="main-article-section bg-white p-4 md:p-6 rounded-lg shadow-md lg:w-1/2">
+            <h2 class="text-xl md:text-2xl font-semibold mb-4 border-b pb-2">Main Article</h2>
+            <h3 class="text-lg md:text-xl font-medium mb-3">Headline of the Day: Important Developments</h3>
+            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna eu fringilla malesuada,
+                ipsum risus eleifend est, non feugiat quam augue euismod eros. Sed malesuada, magna eu fringilla
+                malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros.
+                Proin eget nisl vel libero efficitur tincidunt. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Vivamus in leo nec justo efficitur efficitur.
+                Donec nec odio non justo fermentum tincidunt.
+                <br><br>
+                Nullam nec ex vel libero efficitur tincidunt. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Vivamus in leo nec justo efficitur efficitur.
+                Donec nec odio non justo fermentum tincidunt.
+            </p>
+        </section>
+
+        <!-- Pictorial News Section -->
+        <section class="pictorial-news-section bg-white p-4 md:p-6 rounded-lg shadow-md lg:w-1/4 flex flex-col gap-4">
+            <h2 class="text-xl md:text-2xl font-semibold mb-2 border-b pb-2">Pictorial News</h2>
+            <div class="space-y-4">
+                <div class="rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/delhi_rains_1674974112847_1674981888135_1674981888135.jpeg"
+                         alt="Delhi Rains" class="w-full h-auto object-cover rounded-md"
+                         onerror="this.onerror=null;this.src='https://placehold.co/550x309/cccccc/333333?text=Image+Not+Found';">
+                    <p class="text-gray-600 text-sm mt-2 px-2">Heavy rains lash Delhi, causing traffic disruptions.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/ADANI-INDIA-GAUTAM-ADANI-0_1675011651023_1675011651023_1675011672003_1675011672003.JPG"
+                         alt="Gautam Adani" class="w-full h-auto object-cover rounded-md"
+                         onerror="this.onerror=null;this.src='https://placehold.co/550x309/cccccc/333333?text=Image+Not+Found';">
+                    <p class="text-gray-600 text-sm mt-2 px-2">Adani Group faces scrutiny over recent market events.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/FRANCE-REFORM-PENSIONS-31_1675022359706_1675022359706_1675022383851_1675022383851.JPG"
+                         alt="France Pension Reform" class="w-full h-auto object-cover rounded-md"
+                         onerror="this.onerror=null;this.src='https://placehold.co/550x309/cccccc/333333?text=Image+Not+Found';">
+                    <p class="text-gray-600 text-sm mt-2 px-2">Protests erupt in France over proposed pension reforms.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>

@@ -6,17 +6,16 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
     }
 
-    header {
+    .header {
       background-color: #011e29;
       color: white;
       text-align: center;
-      padding: 30px 0;
+      padding: 30px;
       font-size: 32px;
-      font-weight: bold;
     }
 
     .container {
@@ -26,75 +25,71 @@
       padding: 40px 0;
     }
 
-    .latest-news-section,
-    .main-article-section,
-    .pictorial-news-section {
-      background-color: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     .latest-news-section {
+      background-color: white;
+      padding: 20px;
       width: 200px;
-      text-align: left;
+      border-radius: 20px;
     }
 
-    .main-article-section {
-      width: 500px;
-      text-align: center;
-    }
-
-    .pictorial-news-section {
-      width: 200px;
-    }
-
-    .latest-news-section h2,
-    .main-article-section h2,
-    .pictorial-news-section h2 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      font-weight: bold;
+    .latest-news-section h3 {
+      margin-top: 0;
     }
 
     .latest-news-section ul {
-      list-style-type: disc;
       padding-left: 20px;
       margin: 0;
     }
 
     .latest-news-section li {
-      text-align: right;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .main-article-section {
+      background-color: white;
+      padding: 20px;
+      width: 500px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .main-article-section h2 {
+      margin-top: 0;
     }
 
     .main-article-section p {
       font-size: 16px;
       line-height: 1.6;
       margin: 0;
-      max-width: 90%;
+    }
+
+    .pictorial-news-section {
+      background-color: white;
+      padding: 20px;
+      width: 200px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .pictorial-news-section h3 {
+      margin-top: 0;
     }
 
     .pictorial-news-section img {
       width: 100%;
       height: 100px;
       object-fit: cover;
-      margin-bottom: 15px;
       border-radius: 5px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
-  <header>
-    Shaw's News
-  </header>
+  <header class="header">Shaw's News</header>
 
   <div class="container">
     <div class="latest-news-section">
-      <h2>Latest News Articles</h2>
+      <h3>Latest News Articles</h3>
       <ul>
         <li>Article 1</li>
         <li>Article 2</li>
@@ -105,12 +100,14 @@
     <div class="main-article-section">
       <h2>Main Article</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna eu fringilla malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros. Sed malesuada, magna eu fringilla malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna eu fringilla malesuada,
+        ipsum risus eleifend est, non feugiat quam augue euismod eros. Sed malesuada, magna eu fringilla 
+        malesuada, ipsum risus eleifend est, non feugiat quam augue euismod eros.
       </p>
     </div>
 
     <div class="pictorial-news-section">
-      <h2>Pictorial News</h2>
+      <h3>Pictorial News</h3>
       <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/delhi_rains_1674974112847_1674981888135_1674981888135.jpeg" alt="News 1">
       <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/ADANI-INDIA-GAUTAM-ADANI-0_1675011651023_1675011651023_1675011672003_1675011672003.JPG" alt="News 2">
       <img src="https://images.hindustantimes.com/img/2023/01/29/550x309/FRANCE-REFORM-PENSIONS-31_1675022359706_1675022359706_1675022383851_1675022383851.JPG" alt="News 3">
